@@ -71,6 +71,20 @@ inline - block - Это значение генерирует блочный э�
 none - Временно удаляет элемент из документа. Занимаемое им место не резервируется и веб-страница формируется так, словно элемента и не было.
 =========================================
 
+<body>
+	<div class="example-block">
+		<a href="">text</a>
+		Блочный тег <br />
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quidem consequatur suscipit. Soluta deleniti dolorem maiores aperiam possimus temporibus voluptatum sunt et saepe, veniam, debitis obcaecati. Sequi, eius tenetur beatae?
+	</div>
+	<span class="example-string">
+		Строчный тег <br />
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quidem consequatur suscipit. Soluta deleniti dolorem maiores aperiam possimus temporibus voluptatum sunt et saepe, veniam, debitis obcaecati. Sequi, eius tenetur beatae?
+	</span>
+	<p>
+
+=========================================
+
 .example-block {
 
 }
