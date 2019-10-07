@@ -47,6 +47,7 @@ contain - Масштабирует изображение с сохранени�
 =======================================================
 http://fls.guru/cssbackground.html
 =======================================================
+
 body{
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	padding: 150px 30px 30px 30px;
