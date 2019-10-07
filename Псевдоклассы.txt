@@ -1,0 +1,152 @@
+Синтаксис, то есть правило записи псевдоклассов прост, мы пишем селектор класса либо селектор типа
+ставим двоеточие, пишем тот или иной псевдосласс и уже после этого открываем фигурные
+скобки и пишем нужные CSS параметры:
+Селектор:Псевдокласс { параметры стиля }
+================================================================================================================
+Отлично, теперь рассмотрим псевдоклассы состояния.
+
+:hover
+Срабатывает при наведении на элемент, часто применяется применяется как для ссылок так и для любого другого элемента.
+
+:active
+Срабатывает при нажатии на элемент. В основном применяется к ссылкам и кнопкам.
+
+:visited
+Срабатывает для посещенных ссылок
+
+:focus
+Срабатывает при получении элементом фокуса. Часто применяется к елементам форм. Например инпутам.
+================================================================================================================
+Теперь рассмотрим псевдоклассы положения в коде.
+
+:first-child
+Обращение к первому элементу в блоке
+
+:last-child
+Обращение к последнему элементу в блоке
+
+:nth-child(порядковый номер элемента)
+Обращение к конкретным элементам в блоке
+
+odd - Обращается к элементам с нечётными номерами
+even - Обращается к элементам с чётными номерами
+================================================================================================================
+
+<body>
+  <div class="block">
+    <p>
+      <a href="http://google.com" class="link">Lorem</a> ipsum dolor sit amet, consectetur adipisicing elit. Illo, eveniet. Quaerat molestiae veritatis beatae iure dolor, libero commodi ipsam dignissimos inventore, laborum vitae odio minima dolores hic, debitis corrupti asperiores?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ab, a rem consequatur autem officiis eligendi. Aperiam ut voluptatum quia iure nam eaque, consequuntur magni et. Ullam magni, provident alias!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit minima saepe, cum laboriosam molestiae ipsum maxime, reprehenderit quae sunt accusantium! Tempore dicta enim aut, distinctio praesentium libero animi ab eum?
+    </p>
+  </div>
+  <form action="#">
+    <input type="text" class="textinput" />
+    <button class="textbutton" type="submit">Отправить</button>
+  </form>
+  <ul class="list">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+  </ul>
+
+=================================================================================================================
+
+body{
+	padding: 30px;
+}
+
+.block {
+	margin: 0 0 30px 0;
+}
+
+.block p:nth-child(1){
+	background-color: yellow;
+}
+.block p:nth-child(2){
+	background-color: #eee;
+}
+.block p:nth-child(3){
+	background-color: green;
+}
+
+.block p:nth-child(3):hover{
+	background-color: yellow;
+}
+
+
+.block p{
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0px 0px 20px 0px;
+}
+.link {
+	color: red;
+}
+.link:visited{
+	color: green;
+}
+.link:hover{
+	text-decoration: underline;
+	color: blue;
+}
+.link:active{
+	color:yellow;
+}
+
+.textinput {
+	border: 1px solid #666;
+	height: 50px;
+	padding: 0px 15px;
+	font-size: 18px;
+	width: 300px;
+	margin: 0px 0px 10px 0px;
+}
+
+.textinput:focus{
+	box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+
+.textbutton {
+	display: block;
+	width: 300px;
+	height: 50px;
+	background-color: #666;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0px 0px 30px 0px;
+}
+
+.textbutton:hover{
+	background-color: #333;
+	color: yellow;
+}
+.textbutton:active{
+	background-color: #eee;
+}
+
+.list {}
+.list li{
+	font-size: 18px;
+	margin: 0px 0px 15px 0px;
+}
+/*
+.list li:first-child{
+	color: green;
+}
+.list li:last-child{
+	color: blue;
+	font-weight: 700;
+}
+*/
+.list li:nth-child(even){
+	text-transform: uppercase;
+}
