@@ -33,6 +33,23 @@ visibility
 Отличие visibility: hidden; от opacity:0; в том что блок скрывается и взаимодействовать с ним нельзя.
 =========================================
 
+<body>
+	<div class="example-block">
+		<a href="">text</a>
+		Блочный тег <br />
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quidem consequatur suscipit. Soluta deleniti dolorem maiores aperiam possimus temporibus voluptatum sunt et saepe, veniam, debitis obcaecati. Sequi, eius tenetur beatae?
+	</div>
+	<span class="example-string">
+		Строчный тег <br />
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quidem consequatur suscipit. Soluta deleniti dolorem maiores aperiam possimus temporibus voluptatum sunt et saepe, veniam, debitis obcaecati. Sequi, eius tenetur beatae?
+	</span>
+	<p>
+		<img class="example-image" src="img/youtube.png" alt="" />
+	</p>
+</body>
+</html>
+
+=========================================
 .example-block {
 	border: 5px solid #000;
 	padding: 25px;
