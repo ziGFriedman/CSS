@@ -24,6 +24,7 @@ position:relative,position:absolute,position:fixed и position:sticky (толь�
 Управляет наложением друг на друга элементов с
 параметрами position:relative,position:absolute,position:fixed по оси Z
 
+http://fls.guru/cssposition.html
 ==========================================================
 
 <body>
