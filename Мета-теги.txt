@@ -1,0 +1,295 @@
+Основные теги влияющие на отображение страницы
+
+<!-- Кодировка страницы -->
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+С появлением HTML5 можно использовать
+<meta charset="UTF-8">
+<!-- Настройки адаптивности страницы  -->
+Фиксированная ширина
+<meta name="viewport" content="width=1170">
+Адаптивность
+<meta name="viewport" content="width=device-width">
+
+<!-- Отключает принудительную ссылку у номера телефона на iOS -->
+<meta name="format-detection" content="telephone=no">
+
+=================================================
+
+SEO
+
+<!-- Краткое описание страницы  -->
+<meta name="description" content=" ">
+Пишем не более 140 символов.
+<!-- Ключевые слова страницы  -->
+<meta name="keywords" content=" ">
+Пишем не более 20ти слов. Ключевые фразы разделяем запятой.
+
+<!-- Управление доступом поисковых роботов к странице -->
+<meta name="robots" content="">
+
+По умолчанию страница индексируется поисковыми система, то есть этот мета тег дополнительно указывать не нужно. Но если задача
+стоит запретить либо ограничить индексацию, то существуют следующие значения:
+
+none – запретить индексацию страницы полностью.
+noindex – запретить индексацию содержимого страницы.
+nofollow – игнорировать ссылки в пределах веб-страницы.
+noimageindex - запретить индексацию присутствующих на странице изображений
+noarchive - запретить  вывод в результатах поиска ссылки «Сохраненная копия»
+nosnippet - запретить  вывод в поисковой выдаче под названием страницы фрагмента текста, описывающего её содержание.
+
+Значения указываются через запятую. Например:
+
+Запрет индексации страницы полностью будет выглядеть так:
+<meta name="robots" content="noindex, nofollow">
+или так
+<meta name="robots" content="none">
+
+Запрет индексации ссылок и изображений на странице будет выглядеть так:
+<meta name="robots" content="noimageindex, nofollow">
+при этом текст страницы будет доступен к индексации.
+
+=================================================
+Технические
+<!-- Автор страницы -->
+<meta name="Author" content="Пупкин Василий Петрович">
+<!-- Авторские права -->
+<meta name="Copyright" content="Зимина Татьяна Юрьевна">
+<!-- Адрес автора -->
+<meta name="Address" content="Луна, кратер №97">
+<!-- Редирект (перезагрузка) страницы. Задержка в секундах; url=Адрес сайта/страницы -->
+<meta http-equiv="refresh" content="S; url=URL">
+
+S= Задержка в секундах
+URL= Адрес сайта/страницы
+
+=================================================
+
+Для социальных сетей
+
+Facebook
+Что бы настроить вид нашей страницы в посте мы пишем следующие мета теги:
+
+<!-- локализация сайта, для русскоязычного сайта ru_RU -->
+<meta property="og:locale" content="ru_RU">
+<!-- тип контента, по умолчанию используется article -->
+<meta property="og:type" content="article">
+<!-- заголовок страницы, который будет выводится в записи социальной сети -->
+<meta property="og:title" content="META теги">
+<!-- описание страницы -->
+<meta property="og:description" content="Описание страницы про META теги">
+<!-- ссылка на изображение, которое будет публиковаться в записи -->
+<meta property="og:image" content="http://a/img/bg.jpg">
+<!-- ссылка на текущую страницу -->
+<meta property="og:url" content="http://a/meta/ ">
+<!-- название сайта -->
+<meta property="og:site_name" content="Фрилансер по жизни">
+
+Проверить разметку можно в валидаторе от Facebook https://developers.facebook.com/tools/debug/sharing/
+
+
+Подробнее о протоколе Open Graph можно почитать в официальной документации по ссылке в описании. https://ruogp.me/
+
+Для создания Twitter Cards мета теги будут иметь другой вид:
+
+<!-- Тип карты, по умолчанию используется summary -->
+<meta name="twitter:card" content="summary">
+<!-- Имя/логин автора -->
+<meta name="twitter:site" content="Жека">
+<!-- Название страницы -->
+<meta name="twitter:title" content="META теги">
+<!-- Описание страницы -->
+<meta name="twitter:description" content="про META теги">
+<!-- Cсылка на изображение -->
+<meta name="twitter:image" content="http://a/meta/img/bg.jpg">
+
+Проверяем результат в валидаторе твиттер
+https://cards-dev.twitter.com/validator
+
+Подробнее о создании Twitter Cards можно почитать в официальной документации по ссылке в описании.
+https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started
+
+========================================
+
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы,контейнер для других важных данных(не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>META теги</title>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Кодировка страницы -->
+		<!-- С появлением HTML5 можно использовать  -->
+		<meta charset="UTF-8">
+		<!-- Настройки адаптивности страницы  -->
+		<!-- Адаптивность  -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- Отключает формирование ссылки у номера телефона на iOS -->
+		<meta name="format-detection" content="telephone=no">
+
+		<!-- Краткое описание страницы  -->
+		<meta name="description" content="Что такое мета теги и для чего они нужны">
+		<!-- Ключевые слова страницы  -->
+		<meta name="keywords" content="мета теги, meta, мета теги для seo">
+
+		<!-- Управление доступом поисковых роботов к странице -->
+		<!-- Запрет индексации страницы полностью -->
+		<meta name="robots" content="none">
+
+		<!-- Автор страницы -->
+		<meta name="Author" content="Дарт Вейдер">
+		<!-- Авторские права -->
+		<meta name="Copyright" content="Люк Скайуокер">
+		<!-- Адрес автора -->
+		<meta name="Address" content="Татуин, кратер №97">
+
+		<!-- локализация сайта, для русскоязычного сайта ru_RU -->
+		<meta property="og:locale" content="ru_RU">
+		<!-- тип контента, по умолчанию используется article -->
+		<meta property="og:type" content="article">
+		<!-- заголовок страницы, который будет выводится в записи социальной сети -->
+		<meta property="og:title" content="META теги">
+		<!-- описание страницы -->
+		<meta property="og:description" content="Описание страницы про META теги">
+		<!-- ссылка на изображение, которое будет публиковаться в записи -->
+		<meta property="og:image" content="http://a/meta/img/bg.jpg">
+		<!-- ссылка на текущую страницу -->
+		<meta property="og:url" content="http://a/meta/ ">
+		<!-- название сайта -->
+		<meta property="og:site_name" content="Фрилансер по жизни">
+
+		<!-- Тип карты, по умолчанию используется summary -->
+		<meta name="twitter:card" content="summary">
+		<!-- Имя/логин автора -->
+		<meta name="twitter:site" content="Жека">
+		<!-- Название страницы -->
+		<meta name="twitter:title" content="META теги">
+		<!-- Описание страницы -->
+		<meta name="twitter:description" content="про META теги">
+		<!-- Cсылка на изображение -->
+		<meta name="twitter:image" content="http://a/meta/img/bg.jpg">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<h1>Привет! Это Фрилансер по жизни!</h1>
+		<h2>Давай знакомиться c META тегами!</h2>
+	</body>
+</html>
+
+============================================
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>404</title>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Кодировка страницы -->
+		<!-- С появлением HTML5 можно использовать  -->
+		<meta charset="UTF-8">
+
+		<!-- Редирект (перезагрузка) страницы. -->
+		<!-- Задержка в секундах; url=Адрес сайта/страницы -->
+		<meta http-equiv="refresh" content="5; url=index.html">
+
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<h1>404</h1>
+		<h2>страница не найдена</h2>
+		<h2>через 5 секунд вы будете перенаправлены на главную</h2>
+	</body>
+</html>
+============================================
+
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*--------------------*/
+body {
+  padding: 50px; }
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0px 0px 20px 0px; }
+
+h2 {
+  font-size: 30px;
+  margin: 0px 0px 50px 0px; }
+
+h3 {
+  font-size: 20px;
+  margin: 0px 0px 20px 0px; }
+
+ul li {
+  margin: 0px 0px 10px 0px; }
+  ul li:last-child {
+    margin: 0px 0px 0px 0px; }
+
+.phone {
+  font-size: 50px; }
